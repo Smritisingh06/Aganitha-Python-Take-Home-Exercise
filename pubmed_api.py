@@ -30,9 +30,9 @@ def fetch_paper_details(pubmed_id):
             "Title": root.find(".//Item[@Name='Title']").text or "N/A",
             "Publication Date": root.find(".//Item[@Name='PubDate']").text or "N/A",
             "DOI": root.find(".//Item[@Name='DOI']").text or "N/A",
-            "Non-academic Authors": "N/A",  # Placeholder (Update extraction logic)
-            "Company Affiliations": "N/A",  # Placeholder (Update extraction logic)
-            "Corresponding Author Email": "N/A"  # Placeholder (Update extraction logic)
+            "Non-academic Authors": "N/A", 
+            "Company Affiliations": "N/A",  
+            "Corresponding Author Email": "N/A"  
         }
     except requests.RequestException as e:
         print(f"❌ Error fetching paper details for {pubmed_id}: {e}")
